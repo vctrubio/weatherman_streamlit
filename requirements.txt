@@ -1,5 +1,4 @@
 sqlalchemy
-sqlalchemy.orm
 pydantic
 psycopg2
 plotly
