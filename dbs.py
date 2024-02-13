@@ -5,14 +5,11 @@ Base = declarative_base()
 
 def connect_to_database(client, password, host, db):
     try:
-        postgresql_url = "postgresql://{}:{}@{}/{}".format(
-            client, password, host, db)
-        engine = create_engine(postgresql_url)
+        engine = create_engine('sqlite:///example.db')  # Use SQLite connection string
         Base.metadata.create_all(bind=engine)
         return sessionmaker(autocommit=False, autoflush=False, bind=engine)
     except Exception as e:
-        print("Error connecting to database:", str(e))
-        return None
-    
+        raise Exception(f"Error connecting to database: {e}")
+
 def init_db():
     return connect_to_database('client', 'password', 'localhost:5432', 'weatherman')
