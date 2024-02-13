@@ -4,3 +4,4 @@ streamlit
 pydantic
 psycopg2
 plotly
+pillow
