@@ -1,5 +1,6 @@
 sqlalchemy
 sqlalchemy.orm
 streamlit
-
-
+pydantic
+psycopg2
+plotly
