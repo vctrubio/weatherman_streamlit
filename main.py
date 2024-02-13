@@ -13,7 +13,7 @@ def load_data_into_db(json_data, db):
 
 
 def setting_up():
-    enging, session = init_db()
+    session = init_db()
 
     json_data = init_json()
     location_ptr = load_data_into_db(json_data, session)

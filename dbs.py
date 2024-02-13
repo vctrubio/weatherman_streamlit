@@ -9,11 +9,10 @@ def connect_to_database(client, password, host, db):
             client, password, host, db)
         engine = create_engine(postgresql_url)
         Base.metadata.create_all(bind=engine)
-        return engine, sessionmaker(autocommit=False, autoflush=False, bind=engine)
+        return sessionmaker(autocommit=False, autoflush=False, bind=engine)
     except Exception as e:
         print("Error connecting to database:", str(e))
         return None
     
 def init_db():
-    engine_session = connect_to_database('client', 'password', 'localhost:5432', 'weatherman')
-    return engine_session
+    return connect_to_database('client', 'password', 'localhost:5432', 'weatherman')
