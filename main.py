@@ -16,9 +16,9 @@ def setting_up():
     enging, session = init_db()
 
     json_data = init_json()
-    # location_ptr = load_data_into_db(json_data, session)
+    location_ptr = load_data_into_db(json_data, session)
 
-    plot(json_data)
+    plot(location_ptr)
 
 
 if __name__ == '__main__':
