@@ -1,7 +1,11 @@
 sqlalchemy
+<<<<<<< HEAD
 sqlalchemy.orm
 streamlit
 pydantic
 psycopg2
+pydantic
+psycopg2-binary
 plotly
 pillow
+=======
