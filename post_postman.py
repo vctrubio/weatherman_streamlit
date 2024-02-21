@@ -21,6 +21,7 @@ address = 'Sevilla'
 address = 'London'
 address = 'Tarifa'
 address = 'Lisbon'
+address = 'Vancouver'
 
 
 def get_json_call():
